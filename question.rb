@@ -3,8 +3,8 @@ class Question
 
   def initialize
     @n = rand(1...4)
-    @n1 = rand(10) + 1
-    @n2 = rand(10) + 1
+    @n1 = rand(99) + 1
+    @n2 = rand(99) + 1
   end
 
   def addition
