@@ -7,6 +7,26 @@ class Question
     @n2 = rand(99) + 1
   end
 
+  def decide_question
+    if self.n == 1
+      @q = self.addition
+      @a = self.n1 + self.n2
+      return @q, @a
+    elsif self.n == 2
+      @q = self.subtraction
+      @a = self.n1 - self.n2
+      return @q, @a
+    elsif self.n == 3
+      @q = self.multiplication
+      @a = self.n1 * self.n2
+      return @q, @a
+    elsif self.n == 4
+      @q = self.modulus
+      @a = self.n1 % self.n2
+      return @q, @a
+    end
+  end
+
   def addition
     puts "What is #{self.n1} + #{self.n2} = ???"
   end
@@ -23,24 +43,24 @@ class Question
     puts "What is #{self.n1} % #{self.n2} = ???"
   end
 
-  def add_answer(answer)
-    answer == self.n1 + self.n2
-  end
+  # def add_answer(answer)
+  #   answer == self.n1 + self.n2
+  # end
 
-  def sub_answer(answer)
-    answer == self.n1 - self.n2
-  end
+  # def sub_answer(answer)
+  #   answer == self.n1 - self.n2
+  # end
 
-  def mul_answer(answer)
-    answer == self.n1 * self.n2
-  end
+  # def mul_answer(answer)
+  #   answer == self.n1 * self.n2
+  # end
 
-  def mod_answer(answer)
-    answer == self.n1 % self.n2
-  end
+  # def mod_answer(answer)
+  #   answer == self.n1 % self.n2
+  # end
   
 end
 
-q1 = Question.new
-q1.addition
-q1.modulus
+# q1 = Question.new
+# q1.addition
+# q1.modulus
