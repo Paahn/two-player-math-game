@@ -3,8 +3,8 @@ class Question
 
   def initialize
     @n = rand(1...4)
-    @n1 = rand(10)
-    @n2 = rand(10)
+    @n1 = rand(10) + 1
+    @n2 = rand(10) + 1
   end
 
   def addition
@@ -19,12 +19,28 @@ class Question
     puts "What is #{self.n1} * #{self.n2} = ???"
   end
 
-  def division
-    puts "What is #{self.n1} / #{self.n2} = ???"
+  def modulus
+    puts "What is #{self.n1} % #{self.n2} = ???"
   end
 
+  def add_answer(answer)
+    answer == self.n1 + self.n2
+  end
+
+  def sub_answer(answer)
+    answer == self.n1 - self.n2
+  end
+
+  def mul_answer(answer)
+    answer == self.n1 * self.n2
+  end
+
+  def mod_answer(answer)
+    answer == self.n1 % self.n2
+  end
+  
 end
 
 q1 = Question.new
 q1.addition
-q1.division
+q1.modulus
