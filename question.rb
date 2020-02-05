@@ -44,7 +44,3 @@ class Question
   end
   
 end
-
-# q1 = Question.new
-# q1.addition
-# q1.modulus

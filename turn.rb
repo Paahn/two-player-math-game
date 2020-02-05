@@ -30,6 +30,3 @@ class Turn
   end
 
 end
-
-# t1 = Turn.new("William")
-# puts t1.current_turn
