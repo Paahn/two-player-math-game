@@ -28,19 +28,19 @@ class Question
   end
 
   def addition
-    puts "What is #{self.n1} + #{self.n2} = ???"
+    "What is #{self.n1} + #{self.n2} = ???"
   end
 
   def subtraction
-    puts "What is #{self.n1} - #{self.n2} = ???"
+    "What is #{self.n1} - #{self.n2} = ???"
   end
 
   def multiplication
-    puts "What is #{self.n1} * #{self.n2} = ???"
+    "What is #{self.n1} * #{self.n2} = ???"
   end
 
   def modulus
-    puts "What is #{self.n1} % #{self.n2} = ???"
+    "What is #{self.n1} % #{self.n2} = ???"
   end
   
 end

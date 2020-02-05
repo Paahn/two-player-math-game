@@ -11,12 +11,13 @@ player_2 = gets.chomp
 player_1 = Player.new(player_1)
 player_2 = Player.new(player_2)
 
-current_turn = 0
+current_turn_order = 2
 
-while player_1.life != 0 && player_2 !=0 do
-current_player = (current_turn == 0) ? player_1 : player_2
+while player_1.life != 0 && player_2.life != 0 do
+current_player = (current_turn_order % 2 == 0) ? player_1 : player_2
 play_this_turn = Turn.new(current_player)
 play_this_turn.current_turn
+current_turn_order += 1
 end
   
 if (player_1.life == 0)
