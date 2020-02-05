@@ -42,22 +42,6 @@ class Question
   def modulus
     puts "What is #{self.n1} % #{self.n2} = ???"
   end
-
-  # def add_answer(answer)
-  #   answer == self.n1 + self.n2
-  # end
-
-  # def sub_answer(answer)
-  #   answer == self.n1 - self.n2
-  # end
-
-  # def mul_answer(answer)
-  #   answer == self.n1 * self.n2
-  # end
-
-  # def mod_answer(answer)
-  #   answer == self.n1 % self.n2
-  # end
   
 end
 

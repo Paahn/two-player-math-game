@@ -10,19 +10,24 @@ class Turn
   end
 
   def current_turn
-    puts "-----------NEW TURN-----------"
-    print "#{self.player}: #{self.question.decide_question[1]} "
-    player_answer = gets.chomp
+    until @player.life == 0
+      puts "-----------NEW TURN-----------"
+      print "#{self.player}: #{self.question.decide_question[1]} "
+      player_answer = gets.chomp
 
-    if player_answer == self.question.decide_question[1].to_s
-      @ans = true
-    else
-      @ans = false
+      if player_answer == self.question.decide_question[1].to_s
+        @ans = true
+      else
+        @ans = false
+        self.player.wrong
+        puts "#{self.player} now has #{self.player.life} life/lives left."
+      end
+
+      puts "#{self.player}'s answer was....#{@ans}!"
     end
-
-    puts "#{self.player}'s answer was....#{@ans}!"
   end
+
 end
 
-t1 = Turn.new("William")
-puts t1.current_turn
+# t1 = Turn.new("William")
+# puts t1.current_turn
