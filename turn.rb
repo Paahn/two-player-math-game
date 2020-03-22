@@ -19,13 +19,14 @@ class Turn
 
       if player_answer == self.question.decide_question[1].to_s
         @ans = true
+        puts "#{self.player.name}'s answer was....#{@ans}!"
       else
         @ans = false
         self.player.wrong
+        puts "#{self.player.name}'s answer was....#{@ans}!"
         puts "#{self.player.name} now has #{self.player.life} life/lives left."
       end
 
-      puts "#{self.player.name}'s answer was....#{@ans}!"
     
   end
 
