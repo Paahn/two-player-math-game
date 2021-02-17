@@ -21,8 +21,8 @@ current_turn_order += 1
 end
   
 if (player_1.life == 0)
-  puts "#{player_2.name} wins with a score of #{player_2.life}/3."
+  puts "#{player_2.name} wins with #{player_2.life}/3 lives still remaining."
 elsif (player_2.life == 0)
-  puts "#{player_1.name} wins with a score of #{player_1.life}/3."
+  puts "#{player_1.name} wins with #{player_1.life}/3 lives still remaining."
 end
 puts "Thank you for playing."
