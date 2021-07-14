@@ -24,7 +24,11 @@ class Turn
         @ans = false
         self.player.wrong
         puts "#{self.player.name}'s answer was....#{@ans}!"
-        puts "#{self.player.name} now has #{self.player.life} life/lives left."
+        if (self.player.life == 1)
+          puts "#{self.player.name} now has only #{self.player.life} life left!"
+        else
+          puts "#{self.player.name} now has #{self.player.life} lives left."
+        end
       end
 
     

@@ -21,8 +21,16 @@ current_turn_order += 1
 end
   
 if (player_1.life == 0)
-  puts "#{player_2.name} wins with #{player_2.life}/3 lives still remaining."
+  if (player_2.life == 1)
+    puts "#{player_2.name} wins with only #{player_2.life} life remaining. Clutch win!!!"
+  else
+    puts "#{player_2.name} wins with #{player_2.life}/3 lives still remaining."
+  end
 elsif (player_2.life == 0)
-  puts "#{player_1.name} wins with #{player_1.life}/3 lives still remaining."
+  if (player_1.life == 1)
+    puts "#{player_1.name} wins with only #{player_1.life} life remaining. Clutch win!!!"
+  else
+    puts "#{player_1.name} wins with #{player_1.life}/3 lives still remaining."
+  end
 end
 puts "Thank you for playing."
